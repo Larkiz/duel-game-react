@@ -48,8 +48,8 @@ export const Controls = ({
             id="playerSpeed"
             type="range"
             value={config.playerSpeed}
-            min={1}
-            max={2}
+            min={2}
+            max={3}
             step={0.1}
           />
         </div>
