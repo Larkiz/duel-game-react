@@ -1,66 +1,65 @@
-import { ChangeEvent, useState } from "react";
-import { playerInterface } from "../../types/playersTypes";
-type paramsType = {
-  playerSpeed: number;
-  strikeInterval: number;
-  bulletColor: string;
-};
+import { ChangeEvent } from "react";
+import { playerParamsType } from "../../types/gameTypes";
 
 const colors = ["red", "#1965e0", "#fcba03", "#198700", "#17008a"];
+
+interface ControlsProps {
+  config: playerParamsType;
+  setParams: Function;
+  colorSelectionOpen: boolean;
+  right?: boolean;
+}
+
 export const Controls = ({
   config,
+  setParams,
   colorSelectionOpen,
-}: {
-  config: playerInterface;
-  colorSelectionOpen: boolean;
-}) => {
-  const [params, setParams] = useState<paramsType>({
-    playerSpeed: config.speed,
-    strikeInterval: config.strikeInterval,
-    bulletColor: config.bulletStats.bulletColor,
-  });
-
+  right = false,
+}: ControlsProps) => {
   function speedInput(event: ChangeEvent<HTMLInputElement>) {
     const newSpeed = Number(event.target.value);
 
-    config.speed = config.speed < 0 ? -newSpeed : newSpeed;
+    config.playerSpeed = config.playerSpeed < 0 ? -newSpeed : newSpeed;
 
-    setParams({ ...params, playerSpeed: newSpeed });
+    setParams({ ...config, playerSpeed: newSpeed });
   }
   function strikeIntervalInput(event: ChangeEvent<HTMLInputElement>) {
     const newSpeed = Math.abs(Number(event.target.value));
 
     config.strikeInterval = newSpeed;
-    setParams({ ...params, strikeInterval: newSpeed });
+    setParams({ ...config, strikeInterval: newSpeed });
   }
 
   function bulletColorInput(color: string) {
-    config.bulletStats.bulletColor = color;
+    config.bulletColor = color;
 
-    setParams({ ...params, bulletColor: color });
+    setParams({ ...config, bulletColor: color });
   }
+
+  const classes = right ? " controls controls-right" : "controls";
+
   return (
-    <div className="controls">
+    <div className={classes}>
       <div>
-        <div>
+        <div className="input-labled">
           <label htmlFor="playerSpeed">Speed</label>
           <input
             onChange={speedInput}
             id="playerSpeed"
             type="range"
-            value={params.playerSpeed}
+            value={config.playerSpeed}
             min={1}
             max={2}
             step={0.1}
           />
         </div>
-        <div>
+        <div className="input-labled">
           <label htmlFor="strikeSpeed">Strike speed</label>
           <input
             onChange={strikeIntervalInput}
             id="strikeSpeed"
             type="range"
-            value={-params.strikeInterval}
+            value={-config.strikeInterval}
             min={-1000}
             max={-400}
             step={50}
@@ -73,7 +72,7 @@ export const Controls = ({
             <button
               key={key}
               className={
-                color === params.bulletColor
+                color === config.bulletColor
                   ? "selected set-color-btn"
                   : "set-color-btn"
               }

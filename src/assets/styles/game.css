@@ -17,14 +17,36 @@
 }
 
 .controls {
-  display: grid;
+  display: flex;
   align-items: center;
-  grid-template-columns: 300px auto;
-  grid-template-rows: 50px;
+  gap: 40px;
+  height: 50px;
+}
+
+.controls-right {
+  flex-direction: row-reverse;
+}
+
+.controls-right .input-labled {
+  direction: rtl;
 }
 
 .colors-cont {
   display: flex;
   gap: 5px;
   align-items: center;
+}
+
+.score-table {
+  justify-content: center;
+  display: flex;
+  gap: 10px;
+  font-size: 20px;
+  font-weight: 500;
+  margin-top: 10px;
+}
+
+.container {
+  flex-direction: column;
+  display: inline-flex;
 }
