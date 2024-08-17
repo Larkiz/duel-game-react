@@ -1,15 +1,15 @@
 {
   "files": {
-    "main.css": "/static/css/main.b8e0f59b.css",
-    "main.js": "/static/js/main.11407806.js",
-    "static/js/453.32d47f30.chunk.js": "/static/js/453.32d47f30.chunk.js",
-    "index.html": "/index.html",
-    "main.b8e0f59b.css.map": "/static/css/main.b8e0f59b.css.map",
-    "main.11407806.js.map": "/static/js/main.11407806.js.map",
-    "453.32d47f30.chunk.js.map": "/static/js/453.32d47f30.chunk.js.map"
+    "main.css": "/duel-game-react/static/css/main.b8e0f59b.css",
+    "main.js": "/duel-game-react/static/js/main.8280b901.js",
+    "static/js/453.32d47f30.chunk.js": "/duel-game-react/static/js/453.32d47f30.chunk.js",
+    "index.html": "/duel-game-react/index.html",
+    "main.b8e0f59b.css.map": "/duel-game-react/static/css/main.b8e0f59b.css.map",
+    "main.8280b901.js.map": "/duel-game-react/static/js/main.8280b901.js.map",
+    "453.32d47f30.chunk.js.map": "/duel-game-react/static/js/453.32d47f30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b8e0f59b.css",
-    "static/js/main.11407806.js"
+    "static/js/main.8280b901.js"
   ]
 }
