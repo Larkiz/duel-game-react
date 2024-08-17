@@ -1,15 +1,15 @@
 {
   "files": {
     "main.css": "/duel-game-react/static/css/main.b8e0f59b.css",
-    "main.js": "/duel-game-react/static/js/main.8280b901.js",
+    "main.js": "/duel-game-react/static/js/main.5236cb0c.js",
     "static/js/453.32d47f30.chunk.js": "/duel-game-react/static/js/453.32d47f30.chunk.js",
     "index.html": "/duel-game-react/index.html",
     "main.b8e0f59b.css.map": "/duel-game-react/static/css/main.b8e0f59b.css.map",
-    "main.8280b901.js.map": "/duel-game-react/static/js/main.8280b901.js.map",
+    "main.5236cb0c.js.map": "/duel-game-react/static/js/main.5236cb0c.js.map",
     "453.32d47f30.chunk.js.map": "/duel-game-react/static/js/453.32d47f30.chunk.js.map"
   },
   "entrypoints": [
     "static/css/main.b8e0f59b.css",
-    "static/js/main.8280b901.js"
+    "static/js/main.5236cb0c.js"
   ]
 }
